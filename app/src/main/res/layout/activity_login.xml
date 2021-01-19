@@ -1,184 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login_Activity"
     android:orientation="vertical"
-    >
+    tools:context=".Login_Activity">
+
     <ImageView
-        android:layout_marginTop="20dp"
-        android:src="@drawable/olive"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_weight="5"
-        android:layout_gravity="center">
+        android:id="@+id/img_appLogo"
+        android:layout_width="54dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
     </ImageView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="5"
-        android:orientation="vertical"
-        android:gravity="center"
-        >
-        <EditText
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/txt_greeting"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:lineSpacingExtra="6sp"
+        android:text="반가워요! \no o o o o o o o \nOlibe 입니다."
+        android:textColor="#de000000"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_appLogo">
+        <!-- android:fontFamily="@font/nanum_square_1" -->
+    </TextView>
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:fontFamily="sans-serif"
         android:hint="아이디"
-        android:textSize="12sp"
-        android:layout_marginHorizontal="40dp"
-        />
+        android:lineSpacingExtra="6sp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_greeting" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="비밀번호"
-            android:textSize="12sp"
-            android:layout_marginHorizontal="40dp"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:layout_marginHorizontal="40dp">
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:src="@drawable/information"
-                android:layout_marginRight="3dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="12sp"
-                android:text="아이디/ 비밀번호가 기억나지 않아요:("
-                android:layout_gravity="end"
-                android:textSize="10sp"/>
-        </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:layout_weight="5"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:hint="비밀번호"
+        android:lineSpacingExtra="6sp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_id" />
 
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/round_button"
-            android:text="로그인"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            />
-        
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="가입하기"
-            android:textSize="12sp"
-            android:gravity="center"
-            android:layout_marginTop="20dp"/>
 
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_forgotAccoount"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/information"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_forgotAccount"
+        app:layout_constraintEnd_toStartOf="@+id/txt_forgotAccount"
+        app:layout_constraintTop_toTopOf="@+id/txt_forgotAccount" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="0.1"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/txt_forgotAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="50dp"
+        android:lineSpacingExtra="11sp"
+        android:text="아이디/비밀번호가 기억나지 않아요 :("
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center|right"
-            android:text="다른 이메일로 가입하기"
-            android:textSize="10sp"
-            android:layout_marginHorizontal="10dp"/>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="164dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="sans-serif"
+        android:lineSpacingExtra="6sp"
+        android:text="로그인"
+        android:textColor="#fafafa"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_forgotAccount" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginRight="10dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_weight="1">
-                <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/facebook_logo"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="8sp"
-                    android:text="Facebook"/>
-               </LinearLayout>
+    <TextView
+        android:id="@+id/txt_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:lineSpacingExtra="10sp"
+        android:text="가입하기"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_weight="1">
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/google_logo"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="8sp"
-                    android:text="Google"/>
-            </LinearLayout>
-            <LinearLayout
-                android:visibility="invisible"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_weight="1">
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/google_logo"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="8sp"
-                    android:text="Google"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:visibility="invisible"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_weight="1">
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/google_logo"
-                />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="8sp"
-                    android:text="Google"
-                />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/txt_signIn_with_anotherAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="sans-serif-light"
+        android:lineSpacingExtra="10sp"
+        android:text="다른 이메일로 가입하기"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_facebook_logo"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/facebook_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_signIn_with_anotherAccount" />
+
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/google_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_facebook_logo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
