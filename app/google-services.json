@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "851360299160",
+    "project_id": "alliebe",
+    "storage_bucket": "alliebe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851360299160:android:7daa012735ca216df178ed",
+        "android_client_info": {
+          "package_name": "com.alliebe.mastersejin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851360299160-1m85v7idcqj5dpq9d4nvq34rap4u01rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDgdbALQlHFPoV-RqRo1AgRwdbjRvYBzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851360299160-1m85v7idcqj5dpq9d4nvq34rap4u01rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
