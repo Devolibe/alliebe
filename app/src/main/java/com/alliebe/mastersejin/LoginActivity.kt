@@ -27,26 +27,32 @@ class LoginActivity : AppCompatActivity() {
             val password = et_password.text.toString()
 
             Log.d("Login", "Attemt login with email/pw: $email/***")
+
+            FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) {
+                    if (!it.isSuccessful) return@addOnCompleteListener
+
+                    // else if successful
+                    Log.d("Login", "Successfully logged in with uid: ${it.result?.user?.uid}")
+                    val user =  auth.currentUser
+                    // updateUI(user)
+                }
+                .addOnFailureListener {
+                    Log.d("Login", "Failed to log in user: ${it.message}")
+                    Toast.makeText(this,"Failed to log in user: ${it.message}", Toast.LENGTH_SHORT).show()
+                    // updateUI(null)
+                }
         }
 
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) {
-                if (!it.isSuccessful) return@addOnCompleteListener
 
-                // else if successful
-                Log.d("Login", "Successfully logged in with uid: ${it.result?.user?.uid}")
-                val user =  auth.currentUser
-                updateUI(user)
-            }
-            .addOnFailureListener {
-                Log.d("Login", "Failed to log in user: ${it.message}")
-                Toast.makeText(this,"Failed to log in user: ${it.message}", Toast.LENGTH_SHORT).show()
-                updateUI(null)
-            }
         // 가입하기 버튼 클릭
         txt_signIn.setOnClickListener {
             startActivity(Intent(this, SigninActivity::class.java))
             finish()
+        }
+
+        et_dateOfBirth_signin.setOnClickListener {
+
         }
     }
 
@@ -55,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
-        updateUI(currentUser)
+        // updateUI(currentUser)
     }
     // [END on_start_check_user]
 }
