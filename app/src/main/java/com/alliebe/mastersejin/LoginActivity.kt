@@ -50,10 +50,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, SigninActivity::class.java))
             finish()
         }
-
-        et_dateOfBirth_signin.setOnClickListener {
-
-        }
     }
 
     // [START on_start_check_user]
