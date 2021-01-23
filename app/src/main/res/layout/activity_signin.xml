@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Signin_Activity">
+    tools:context=".SigninActivity">
 
     <TextView
         android:id="@+id/txt_ur_info_plz"
@@ -35,8 +35,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ur_info_plz"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/txt_ur_info_plz" />
 
     <EditText
         android:id="@+id/et_password_signin"
@@ -52,19 +51,18 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_signin"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/et_email_signin" />
 
     <TextView
 
         android:id="@+id/hint_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
         android:text="ex\@ex.ex"
         android:textColor="#808080"
-        android:layout_marginEnd="4dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/et_email_signin"
-        app:layout_constraintEnd_toEndOf="@id/et_email_signin"/>
+        app:layout_constraintEnd_toEndOf="@id/et_email_signin" />
 
     <EditText
         android:id="@+id/et_nickname_signin"
@@ -82,12 +80,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_password_signin" />
 
+    <TextView
+
+        android:id="@+id/hint_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="YYYY/MM/DD"
+        android:textColor="#808080"
+        android:clickable="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_dateOfBirth_signin"
+        app:layout_constraintEnd_toEndOf="@id/et_dateOfBirth_signin"
+
+        />
+
     <EditText
         android:id="@+id/et_dateOfBirth_signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="45dp"
         android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:editable="false"
         android:fontFamily="sans-serif"
         android:hint="생년월일"
         android:lineSpacingExtra="6sp"
@@ -97,19 +111,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_nickname_signin" />
-
-    <TextView
-
-        android:id="@+id/hint_birth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="YYYY/MM/DD"
-        android:textColor="#808080"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/et_dateOfBirth_signin"
-        app:layout_constraintEnd_toEndOf="@id/et_dateOfBirth_signin"
-
-        />
 
     <EditText
         android:id="@+id/txt_sex_signin"
@@ -144,7 +145,7 @@
 
 
         <RadioButton
-            android:id="@+id/rb_male"
+            android:id="@+id/rb_selectSex_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="여성"
@@ -152,7 +153,7 @@
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/rb_female"
+            android:id="@+id/rb_selectSex_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="남성"
@@ -160,7 +161,7 @@
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/rb_etc"
+            android:id="@+id/rb_selectSex_etc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="기타"
