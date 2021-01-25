@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SigninActivity">
+    tools:context=".SignupActivity">
 
     <TextView
         android:id="@+id/txt_ur_info_plz"
@@ -22,7 +22,7 @@
     <!-- android:fontFamily="@font/nanum_square_l" -->
 
     <EditText
-        android:id="@+id/et_email_signin"
+        android:id="@+id/et_email_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="45dp"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_ur_info_plz" />
 
     <EditText
-        android:id="@+id/et_password_signin"
+        android:id="@+id/et_password_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="45dp"
@@ -51,7 +51,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_signin" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email_signup" />
 
     <TextView
 
@@ -61,11 +61,11 @@
         android:layout_marginEnd="4dp"
         android:text="ex\@ex.ex"
         android:textColor="#808080"
-        app:layout_constraintBaseline_toBaselineOf="@+id/et_email_signin"
-        app:layout_constraintEnd_toEndOf="@id/et_email_signin" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_email_signup"
+        app:layout_constraintEnd_toEndOf="@id/et_email_signup" />
 
     <EditText
-        android:id="@+id/et_nickname_signin"
+        android:id="@+id/et_nickname_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="45dp"
@@ -78,7 +78,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password_signin" />
+        app:layout_constraintTop_toBottomOf="@+id/et_password_signup" />
 
     <TextView
 
@@ -89,13 +89,13 @@
         android:text="YYYY/MM/DD"
         android:textColor="#808080"
         android:clickable="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/et_dateOfBirth_signin"
-        app:layout_constraintEnd_toEndOf="@id/et_dateOfBirth_signin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_dateOfBirth_signup"
+        app:layout_constraintEnd_toEndOf="@id/et_dateOfBirth_signup"
 
         />
 
     <EditText
-        android:id="@+id/et_dateOfBirth_signin"
+        android:id="@+id/et_dateOfBirth_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="45dp"
@@ -110,7 +110,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nickname_signin" />
+        app:layout_constraintTop_toBottomOf="@+id/et_nickname_signup" />
 
     <EditText
         android:id="@+id/txt_sex_signin"
@@ -127,13 +127,13 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_dateOfBirth_signin">
+        app:layout_constraintTop_toBottomOf="@+id/et_dateOfBirth_signup">
 
 
     </EditText>
 
     <RadioGroup
-        android:id="@+id/rg_sex_signin"
+        android:id="@+id/rg_sex_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -170,14 +170,14 @@
     </RadioGroup>
 
     <ImageButton
-        android:id="@+id/ibtn_signin"
+        android:id="@+id/ibtn_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="62dp"
         android:background="#0000"
         android:src="@drawable/imgbtn_states"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/rg_sex_signin" />
+        app:layout_constraintEnd_toEndOf="@id/rg_sex_signup" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

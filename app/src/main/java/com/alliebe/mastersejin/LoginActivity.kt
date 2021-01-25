@@ -9,7 +9,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_signin.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -46,8 +45,8 @@ class LoginActivity : AppCompatActivity() {
 
 
         // 가입하기 버튼 클릭
-        txt_signIn.setOnClickListener {
-            startActivity(Intent(this, SigninActivity::class.java))
+        txt_signup.setOnClickListener {
+            startActivity(Intent(this, SignupActivity::class.java))
             finish()
         }
     }
