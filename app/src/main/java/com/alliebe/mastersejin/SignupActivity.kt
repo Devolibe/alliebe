@@ -87,6 +87,7 @@ class SignupActivity : AppCompatActivity() {
             // If no radio button checked in this radio group
             Toast.makeText(applicationContext,"성별을 선택해주세요.",
                 Toast.LENGTH_SHORT).show()
+            return
         }
 
 
@@ -112,6 +113,8 @@ class SignupActivity : AppCompatActivity() {
             Toast.makeText(this,"생년월일을 입력해주세요.", Toast.LENGTH_SHORT).show()
             return
         }
+
+
 
 
         Log.d("SignupActivity", "Email is: " + email)
