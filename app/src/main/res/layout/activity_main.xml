@@ -6,13 +6,92 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <LinearLayout
+        android:id="@+id/tab_mainActivity"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#807452"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+
+        <Button
+            android:text="추천"
+            android:textColor="@color/white"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_button_left_main"
+            android:textSize="10sp"
+            />
+        <Button
+            android:background="@color/black"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:text="추천 스토리"
+            android:textSize="10sp"
+            android:textColor="@color/white"/>
+        <Button
+            android:text="질문 목록"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_button_right_main"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout_mainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation_mainActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_mainActivity"
+        app:layout_constraintVertical_weight="0" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation_mainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imgbtn_home"
+            android:layout_marginStart="14dp"
+            android:background="@android:color/transparent"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_gravity="center|"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginEnd="18dp"
+            android:src="@drawable/imgbtn_search_white"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:layout_marginEnd="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imgbtn_plus_white"
+            android:background="@android:color/transparent"
+            />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

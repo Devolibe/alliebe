@@ -2,7 +2,10 @@ package com.alliebe.mastersejin
 
 import android.app.DatePickerDialog
 import android.os.Bundle
+import android.text.InputFilter
+import android.text.TextUtils
 import android.util.Log
+import android.util.Patterns
 import android.view.View
 import android.widget.*
 import androidx.annotation.NonNull
@@ -18,6 +21,7 @@ import kotlinx.android.synthetic.main.activity_signup.*
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.regex.Pattern
 
 
 class SignupActivity : AppCompatActivity() {
