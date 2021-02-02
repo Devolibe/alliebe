@@ -1,4 +1,4 @@
-package com.alliebe.mastersejin
+package com.alliebe.mastersejin.com.alliebe.mastersejin
 
 import androidx.appcompat.app.AppCompatActivity
 
