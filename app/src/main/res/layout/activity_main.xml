@@ -20,6 +20,7 @@
 
 
         <Button
+            android:id="@+id/recommend_btn"
             android:text="추천"
             android:textColor="@color/white"
             android:layout_width="50dp"
@@ -28,6 +29,7 @@
             android:textSize="10sp"
             />
         <Button
+            android:id="@+id/lookaround_btn"
             android:background="@color/black"
             android:layout_width="54dp"
             android:layout_height="match_parent"
@@ -35,6 +37,7 @@
             android:textSize="10sp"
             android:textColor="@color/white"/>
         <Button
+            android:id="@+id/question_btn"
             android:text="질문 목록"
             android:textSize="10sp"
             android:textColor="@color/white"
