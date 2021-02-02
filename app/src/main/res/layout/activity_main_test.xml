@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container_mainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         />
+
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/tab_mainActivity"
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginTop="14dp"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_weight="1">
+        app:layout_scrollFlags="scroll|enterAlways"
+        >
 
 
         <Button
-            android:id="@+id/recommend_btn"
             android:text="추천"
             android:textColor="@color/white"
             android:layout_width="50dp"
@@ -29,7 +34,6 @@
             android:textSize="10sp"
             />
         <Button
-            android:id="@+id/lookaround_btn"
             android:background="@color/black"
             android:layout_width="54dp"
             android:layout_height="match_parent"
@@ -37,7 +41,6 @@
             android:textSize="10sp"
             android:textColor="@color/white"/>
         <Button
-            android:id="@+id/question_btn"
             android:text="질문 목록"
             android:textSize="10sp"
             android:textColor="@color/white"
@@ -45,56 +48,42 @@
             android:layout_height="match_parent"
             android:background="@drawable/round_button_right_main"/>
 
-    </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager_mainActivity"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation_mainActivity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tab_mainActivity"
-        app:layout_constraintVertical_weight="0" />
-
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation_mainActivity"
         android:layout_width="match_parent"
         android:layout_height="49dp"
         android:orientation="horizontal"
         android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_weight="1">
+        android:layout_gravity="bottom"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior">
 
         <ImageButton
-            android:layout_gravity="center"
+            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/imgbtn_home"
             android:layout_marginStart="14dp"
             android:background="@android:color/transparent"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
 
         <ImageButton
-            android:layout_gravity="center"
+            android:layout_gravity="center_vertical|end"
             android:layout_width="21dp"
             android:layout_height="21dp"
-            android:layout_marginEnd="18dp"
+            android:layout_marginEnd="53dp"
             android:src="@drawable/imgbtn_search_white"
             android:background="@android:color/transparent"/>
 
         <ImageButton
-            android:layout_gravity="center"
-            android:layout_marginEnd="14dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="14.5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/imgbtn_plus_white"
             android:background="@android:color/transparent"
             />
 
-    </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
