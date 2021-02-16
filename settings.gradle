@@ -1,2 +1,4 @@
+include ':unfolked'
+include ':unfolked'
 include ':app'
 rootProject.name = "Alliebe"
