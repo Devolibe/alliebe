@@ -6,178 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".SignupActivity">
 
-    <TextView
-        android:id="@+id/txt_ur_info_plz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="82dp"
-        android:lineSpacingExtra="6sp"
-        android:text="당신의 정보를\n아래에 적어주세요:)"
-        android:textColor="#de000000"
-        android:textSize="24sp"
-        android:textStyle="normal"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="126dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/ic_login_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <!-- android:fontFamily="@font/nanum_square_l" -->
-
-    <EditText
-        android:id="@+id/et_email_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="45dp"
-        android:layout_marginTop="100dp"
-        android:fontFamily="sans-serif"
-        android:hint="이메일"
-        android:lineSpacingExtra="6sp"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ur_info_plz" />
-
-    <EditText
-        android:id="@+id/et_password_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="45dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif"
-        android:hint="비밀번호"
-        android:lineSpacingExtra="6sp"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_signup" />
 
     <TextView
-
-        android:id="@+id/hint_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text="ex\@ex.ex"
-        android:textColor="#808080"
-        app:layout_constraintBaseline_toBaselineOf="@+id/et_email_signup"
-        app:layout_constraintEnd_toEndOf="@id/et_email_signup" />
-
-    <EditText
-        android:id="@+id/et_nickname_signup"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="45dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif"
-        android:hint="닉네임"
-        android:lineSpacingExtra="6sp"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="80dp"
+        android:text="이메일을 작성하여 회원가입 및 로그인"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password_signup" />
-
-    <TextView
-
-        android:id="@+id/hint_birth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text="YYYY/MM/DD"
-        android:textColor="#808080"
-        android:clickable="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/et_dateOfBirth_signup"
-        app:layout_constraintEnd_toEndOf="@id/et_dateOfBirth_signup"
-
-        />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/et_dateOfBirth_signup"
+        android:id="@+id/email_signup_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="45dp"
-        android:layout_marginTop="10dp"
-        android:clickable="true"
-        android:editable="false"
-        android:fontFamily="sans-serif"
-        android:hint="생년월일"
-        android:lineSpacingExtra="6sp"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/ic_email_button"
+        android:hint="Olibe@gmail.com"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nickname_signup" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <EditText
-        android:id="@+id/txt_sex_signin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="45dp"
-        android:layout_marginTop="10dp"
-        android:editable="false"
-        android:fontFamily="sans-serif"
-        android:hint="성별"
-        android:lineSpacingExtra="6sp"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_dateOfBirth_signup">
-
-
-    </EditText>
-
-    <RadioGroup
-        android:id="@+id/rg_sex_signup"
+    <Button
+        android:id="@+id/signup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@id/txt_sex_signin"
-        app:layout_constraintEnd_toEndOf="@id/txt_sex_signin"
-
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintTop_toTopOf="@+id/txt_sex_signin">
-
-
-        <RadioButton
-            android:id="@+id/rb_selectSex_male"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="여성"
-            android:textColor="#B2B2B2"
-            android:textSize="16sp" />
-
-        <RadioButton
-            android:id="@+id/rb_selectSex_female"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="남성"
-            android:textColor="#B2B2B2"
-            android:textSize="16sp" />
-
-        <RadioButton
-            android:id="@+id/rb_selectSex_etc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="기타"
-            android:textColor="#B2B2B2"
-            android:textSize="16sp" />
-    </RadioGroup>
-
-    <ImageButton
-        android:id="@+id/ibtn_signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="62dp"
-        android:background="#0000"
-        android:src="@drawable/imgbtn_states"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/rg_sex_signup" />
+        android:layout_marginTop="148dp"
+        android:background="@drawable/ic_next_button"
+        android:text="다음"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_signup_editText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
