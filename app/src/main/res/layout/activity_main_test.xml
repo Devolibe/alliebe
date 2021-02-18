@@ -72,7 +72,7 @@
             android:layout_width="21dp"
             android:layout_height="21dp"
             android:layout_marginEnd="53dp"
-            android:src="@drawable/imgbtn_search_white"
+            android:src="@drawable/ic_search_white"
             android:background="@android:color/transparent"/>
 
         <ImageButton

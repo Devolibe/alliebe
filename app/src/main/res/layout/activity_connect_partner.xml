@@ -45,7 +45,7 @@
         android:id="@+id/btn_searchPartner_connect_partner"
         android:layout_width="16dp"
         android:layout_height="16dp"
-        android:src="@drawable/imgbtn_search"
+        android:src="@drawable/ic_search"
         app:layout_constraintEnd_toEndOf="@+id/et_searchPartner_connect_partner"
         app:layout_constraintTop_toTopOf="@id/et_searchPartner_connect_partner"
         app:layout_constraintBottom_toBottomOf="@id/et_searchPartner_connect_partner"
