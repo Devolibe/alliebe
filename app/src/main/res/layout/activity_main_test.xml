@@ -80,7 +80,7 @@
             android:layout_marginEnd="14.5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/imgbtn_plus_white"
+            android:src="@drawable/ic_plus_white"
             android:background="@android:color/transparent"
             />
 

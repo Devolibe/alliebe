@@ -7,7 +7,6 @@
         <item name="colorAccent">@color/design_default_color_secondary</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
         
     </style>
 
