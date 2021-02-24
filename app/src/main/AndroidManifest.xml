@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".HomeFragment"></activity>
         <activity android:name=".StoryEditActivity" />
         <activity android:name=".activity_write_chapter" />
         <activity android:name=".WriteStory" />
