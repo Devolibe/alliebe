@@ -1,6 +1,6 @@
-# Alliebe
+# Alliebe🌿
 
-## 이슈기반협업 편의를 위한 Git 기초
+## 이슈기반협업 편의를 위한 Git 기초😎
 1. Master Branch로 Checkout   <br/>$ git checkout master
 2. 중앙 저장소 Devolibe가 upstream 리모트 저장소로 등록됐는지 확인   <br/>$ git remote -v   <br/>안 되어있다면, $ git remote add upstream https://github.com/Devolibe/alliebe.git
 3. 중앙 저장소 Devolibe에서 변경 사항 갱신   <br/>$ git pull upstream <Devolibe Branch 명> 현재는 Devolibe feature 브랜치가 디폴트
