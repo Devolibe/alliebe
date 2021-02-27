@@ -1,5 +1,6 @@
 package com.alliebe.mastersejin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -41,6 +42,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         myRef.child("sejin").setValue("Hello, World!")
 
         val fab = findViewById<FloatingActionButton>(R.id.edit_fab)
+        fab.setOnClickListener{
+            var intent = Intent(this@MainActivity, StoryEditActivity::class.java)
+            startActivity(intent)
+        }
+
         initNavigationBar()
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
