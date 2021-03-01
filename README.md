@@ -10,7 +10,7 @@
 7. 생성된 Branch로 이동 <br/>$ git checkout <새로 생성한 브랜치명>
 8. 작업
 9. 변경 사항 add   <br/>$ git add . (전체 파일을 추가할 경우)
-10. 메세지와 함께 Commit  <br/><br/>$ git commit -m"Close #이슈번호 명령조의 커밋 제목   <br/>>(커밋 제목과 내용 사이 줄 한칸 띄우기)  <br/>커밋 내용"    <br/><br/>ex)$ git commit -m"Close #9 Refactor the ExampleActivity       <br/>⚠ **커밋 제목 뒤에 \" 붙이면 안 됨**<br/>The ExampleActivity has been refactored as discussed at the latest meeting."<br/>
+10. 메세지와 함께 Commit  <br/><br/>$ git commit -m"OLIBE-이슈번호 #close 명령조의 커밋 제목   <br/>>(커밋 제목과 내용 사이 줄 한칸 띄우기)  <br/>커밋 내용"    <br/><br/>ex)$ git commit -m"OLIBE-43 #close modify the readme.md       <br/>⚠ **커밋 제목 뒤에 \" 붙이면 안 됨**<br/>You can check a basic for the cooperation."<br/>
 11.  개인 리모트 저장소로 Push <br/> $ git push origin <로컬에서 작업한 브랜치 명>
 12.  개인 -> 중앙 Pr
 13.  코드 리뷰 후 Merge
